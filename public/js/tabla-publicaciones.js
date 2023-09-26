@@ -20,7 +20,7 @@ const mostrarPublicaciones = (publicaciones = [], elementoHtml) => {
                 <td>${ (publicacion.fecha).split('T')[0] }</td>
                 <td>
                     <a href="/admin/editar-publicacion/${publicacion.id}" class="btn btn-sm btn-warning">Editar</a>
-                    <button class="btn btn-danger btn-sm btn-eliminar" id="${publicacion.id}">Eliminar</button>
+                    <button class="btn btn-danger btn-sm btn-eliminar" onclick=eliminarPublicacion(${publicacion.id}) id="${publicacion.id}">Eliminar</button>
                 </td>
         `
     })
@@ -31,8 +31,8 @@ const mostrarPublicaciones = (publicaciones = [], elementoHtml) => {
 
 }
 
-const eliminarPublicacion = async (e) => {
-    const id = e.target.id;
+const eliminarPublicacion = async (id) => {
+    // const id = e.target.id;
 
     // Se envía la petición al servidor
     const response = await fetch(`/api/publicacion/${id}`, {

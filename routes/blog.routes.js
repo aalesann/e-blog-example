@@ -63,6 +63,6 @@ router.get('/api/publicacion/:id', obtenerPublicacion)
 router.put('/api/publicacion/:id', actualizarPublicacion);
 
 // Eliminar una publicación
-router.delete('/publicacion/:id', eliminarPublicacion);
+router.delete('/api/publicacion/:id', eliminarPublicacion);
 
 module.exports = router;
