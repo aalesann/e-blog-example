@@ -1,0 +1,43 @@
+<%-include('partials/header')  %>
+<%-include('partials/navbar')  %>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto border rounded p-2">
+                <h3 class="text-center">Editar</h3>
+                <form action="#" id="form-editar" data-id="<%= id  %>" >
+                    <div class="mb-3">
+                        <input type="text" id="titulo-post" class="form-control" placeholder="Título del Post">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <textarea id="detalle-post" class="form-control" placeholder="Ingrese detalle" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Descripción</label>
+                          </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="date" class="form-control" name="" id="fecha">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" id="url-img" class="form-control" placeholder="Url imagen">
+                    </div>
+
+                    <div class="text-center">
+                        <img src="" id="img-preview" class="rounded mx-auto mb-3" style="height:200px; width: 200px">
+                    </div>
+                    <button type="submit" id="btn-guardar" class="btn btn-primary w-100">
+                        Guardar
+                    </button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js/editar-publicacion.js"></script>
+
+<%-include('partials/footer')  %>

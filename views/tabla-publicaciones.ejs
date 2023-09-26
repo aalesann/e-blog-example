@@ -1,0 +1,45 @@
+<%-include('partials/header')  %>
+<%-include('partials/navbar')  %>
+
+    
+
+    <!-- Formulario para crear publicaciones -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center py-3">Listado de Publicaciones (Admin)</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-sm btn-primary">
+                    <a href="/admin/nueva-publicacion" style="text-decoration: none;" class="text-white text-unstyled">Crear Publicacion</a>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th>Avatar</th>
+                            <th>Titulo</th>
+                            <th>Detalle</th>
+                            <th>Publicada el</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-publicaciones">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="/js/tabla-publicaciones.js"></script>
+
+  <%-include('partials/footer')  %>
